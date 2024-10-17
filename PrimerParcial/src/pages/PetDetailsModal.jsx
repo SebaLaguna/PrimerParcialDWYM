@@ -2,10 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const PetDetailsModal = ({ pet, closeModal, onAdopt }) => {
-    const navigate = useNavigate(); // Hook para navegar entre rutas
+    const navigate = useNavigate();
 
     const handleEdit = () => {
-        navigate(`/edit-pet/${pet.id}`); // Redirige a la página de edición
+        navigate(`/edit-pet/${pet.id}`); 
     };
 
     return (
@@ -16,7 +16,7 @@ const PetDetailsModal = ({ pet, closeModal, onAdopt }) => {
                 <img src={pet.photo} alt={pet.name} className="pet-image" />
                 <p>Edad: {pet.age}</p>
                 <p>Descripción: {pet.description}</p>
-                <button onClick={handleEdit}>Editar</button> {/* Redirige a editar */}
+                <button onClick={handleEdit}>Editar</button> 
                 <button onClick={onAdopt}>Adoptar</button>  
             </div>
         </div>
